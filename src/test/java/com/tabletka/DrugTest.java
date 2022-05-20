@@ -12,9 +12,7 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static sun.jvm.hotspot.runtime.BasicObjectLock.size;
+
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -24,8 +22,8 @@ public class DrugTest {
 
     @Test
     public void searchBook() {
-        Iterable<Drug> drg1 = drgRep.search("По записям безумца");
-        Drug l = new Drug("5","Франция","ОАО \"Фармстандарт-Лексредства\"", "Российская Федерация", "Бронхиальная астма и другие заболевания со спастическими состояниями бронхов.","/img/drugs_imgs/sulbul.png","Фармстандарт","Сальбутамол-Фармстандарт","322");
+        Iterable<Drug> drg1 = drgRep.search("Сальбутамол-Фармстандарт");
+        Drug l = new Drug(5L,"Сальбутамол-Фармстандарт","ОАО \"Фармстандарт-Лексредства\"", "Бронхиальная астма и другие заболевания со спастическими состояниями бронхов.", "Российская Федерация", 322,"/img/drugs_imgs/sulbul.png");
 
         Assertions.assertEquals(1, drg1.spliterator().getExactSizeIfKnown());
     }

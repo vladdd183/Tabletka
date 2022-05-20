@@ -1,0 +1,4 @@
+com/tabletka/ApplicationTests.java
+ com.tabletka.ApplicationTests
+com/tabletka/DrugTest.java
+ com.tabletka.DrugTest
